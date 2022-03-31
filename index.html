@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Calc.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+        <div id="mySideNav" class="SideNav" name="SideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <label for="Dark" class="DarkModeLabel">Darkmode</label>
+            <input id="CheckBox" name="Dark" type="checkbox" class="DarkMode" onchange="DarkMode()">
+        </div>
+
+        <span class="OpenButton" onclick="openNav()">☰</span>
+
+
+    <h1 id="H1Title" class="H1Title">Cosinus Relationer</h1>
+
+    <div class="CosRelationerWrap">
+        <select name="Hvilken" id="Hvilken">
+            <option value="Cos(a)">Cos(a)</option>
+            <option value="Cos(b)">Cos(b)</option>
+            <option value="Cos(c)">Cos(c)</option>
+        </select>
+        <label>A</label>
+        <input type="text" onClick="this.select();" id="a">
+        <label>B</label>
+        <input type="text" onClick="this.select();" id="b">
+        <label>C</label>
+        <input type="text" onClick="this.select();" id="c">
+        <button type="button" onclick="calc()">Regn</button>
+        <input disabled  value="" id="Slut">
+    </div>
+
+    <hr>
+
+    <h1 >Kendt Vinkel</h1>
+
+    <div class="KendtVinkelWrap">
+        <label for="Vinkel">Vinkel</label>
+        <input type="text" onClick="this.select();" id="Vinkel" name="Vinkel">
+        <select name="Side" id="Side" onchange="LabelChange()">
+            <option value="HyHo">Hyp  ->  Hos</option>
+            <option value="HyMo">Hyp  ->  Mod</option>
+            <option value="HoHy">Hos  ->  Hyp</option>
+            <option value="MoHy">Mod  ->  Hyp</option>
+            <option value="MoHo">Hos  ->  Mod</option>
+            <option value="HoMo">Mod  ->  Hos</option>
+        </select>
+        <label id="SideNavn" for="SideNavn">Hypotynuse</label>
+        <input type="text" onClick="this.select();" name="SideNavn" id="SideLængde">
+        <input type="button" onclick="CalcKendtVinkel()" value="Regn">
+        <input disabled  value="" id="SlutKendtVinkel">
+    </div>
+    <hr>
+    <h1 >Ukendt Vinkel</h1>
+
+    <div class="UkendtVinkelWrap">
+        <select id="UkendtSideSelector" name="UkendtVinkelSide"  onchange="LabelChange()">
+            <option value="ACos">ACos</option>
+            <option value="ASin">ASin</option>
+            <option value="ATan">ATan</option>
+            <option value="BCos">BCos</option>
+            <option value="BSin">BSin</option>
+            <option value="BTan">BTan</option>
+        </select>
+
+        <label id="UkendtSideNavnA" for="UkendtSideA">Hosliggende</label>
+        <input type="text" onClick="this.select();" name="UkendtSideA" id="UkendtSideA">
+        <label id="UkendtSideNavnB" for="UkendtSideB">Hypotynuse</label>
+        <input type="text" onClick="this.select();" name="UkendtSideB" id="UkendtSideB">
+        <button type="button" onclick="calcUkendtVinkel()">Regn</button>
+        <input disabled  value="" id="SlutUkendtVinkel">
+    </div>
+
+    <hr>
+
+    <h1 >Omregning</h1>
+    
+    <div class="OmregnWrap">
+        <select id="OmregnSelect"  onchange="LabelChange()">
+            <option value="VC">Vinkel Til Cos</option>
+            <option value="VS">Vinkel Til Sin</option>
+            <option value="VT">Vinkel Til Tan</option>
+            <option value="CV">Cos Til Vinkel</option>
+            <option value="SV">Sin Til Vinkel</option>
+            <option value="TV">Tan Til Vinkel</option>
+        </select>
+
+        <label id="OmregnNavn" for="OmregnTal">Vinkel</label>
+        <input type="text" onClick="this.select();" name="OmregnTal" id="OmregnTal" >
+        <button type="button" onclick="calcOmregn()">Regn</button>
+        <input disabled  value="" id="SlutOmregn">
+    </div>
+
+
+</body>
+</html>
