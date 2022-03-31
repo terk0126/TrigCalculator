@@ -67,9 +67,9 @@ function LabelChange() {
 
 
     if (value == "Hyp  ->  Hos") {
-        sideNavn.innerText = "Hypotynuse"
+        sideNavn.innerText = "hypotenusen"
     } else if (value == "Hyp  ->  Mod") {
-        sideNavn.innerText = "Hypotynuse"
+        sideNavn.innerText = "hypotenusen"
 
     } else if (value == "Hos  ->  Hyp") {
         sideNavn.innerText = "Hosliggende"
@@ -87,10 +87,10 @@ function LabelChange() {
 
     if (UkendtVinkelSide == "ACos" ||UkendtVinkelSide ==  "BCos") {
         UkendtSideNavnA.innerText = "Hosliggende"
-        UkendtSideNavnB.innerText = "Hypotynuse"
+        UkendtSideNavnB.innerText = "hypotenusen"
     } else if (UkendtVinkelSide == "ASin"|| UkendtVinkelSide == "BSin") {
         UkendtSideNavnA.innerText = "Modstående"
-        UkendtSideNavnB.innerText = "Hypotynuse"
+        UkendtSideNavnB.innerText = "hypotenusen"
     } else if (UkendtVinkelSide == "ATan"|| UkendtVinkelSide == "BTan") {
         UkendtSideNavnA.innerText = "Modstående"
         UkendtSideNavnB.innerText = "Hosliggende"
