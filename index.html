@@ -15,8 +15,19 @@
 <body id="body">
         <div id="mySideNav" class="SideNav" name="SideNav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <label for="Dark" class="DarkModeLabel">Darkmode</label>
-            <input id="CheckBox" name="Dark" type="checkbox" class="DarkMode" onchange="DarkMode()">
+            <div class="CheckWrap">
+
+                <div class="DarkWrap">
+                    <label for="Dark" class="DarkModeLabel">Darkmode</label>
+                    <input id="DarkMode" name="Dark" type="checkbox" class="DarkMode" onchange="DarkMode()">
+                </div>
+
+                <div class="ComicWrap">  
+                    <label for="Comic" class="ComicLabel">Comicmode</label>
+                    <input id="ComicMode" name="Comic" type="checkbox" class="ComicMode" onchange="ComicMode()">
+                </div>
+
+            </div>
         </div>
 
         <span class="OpenButton" onclick="openNav()">☰</span>
@@ -30,11 +41,11 @@
             <option value="Cos(b)">Cos(b)</option>
             <option value="Cos(c)">Cos(c)</option>
         </select>
-        <label>A</label>
+        <label class="InputLabel">A</label>
         <input type="text" onClick="this.select();" id="a">
-        <label>B</label>
+        <label class="InputLabel">B</label>
         <input type="text" onClick="this.select();" id="b">
-        <label>C</label>
+        <label class="InputLabel">C</label>
         <input type="text" onClick="this.select();" id="c">
         <button type="button" onclick="calc()">Regn</button>
         <input disabled  value="" id="Slut">
@@ -45,7 +56,7 @@
     <h1 >Kendt Vinkel</h1>
 
     <div class="KendtVinkelWrap">
-        <label for="Vinkel">Vinkel</label>
+        <label for="Vinkel"  class="InputLabel">Vinkel</label>
         <input type="text" onClick="this.select();" id="Vinkel" name="Vinkel">
         <select name="Side" id="Side" onchange="LabelChange()">
             <option value="HyHo">Hyp  ->  Hos</option>
@@ -55,7 +66,7 @@
             <option value="MoHo">Hos  ->  Mod</option>
             <option value="HoMo">Mod  ->  Hos</option>
         </select>
-        <label id="SideNavn" for="SideNavn">Hypotynuse</label>
+        <label id="SideNavn" for="SideNavn"   class="InputLabel">Hypotynuse</label>
         <input type="text" onClick="this.select();" name="SideNavn" id="SideLængde">
         <input type="button" onclick="CalcKendtVinkel()" value="Regn">
         <input disabled  value="" id="SlutKendtVinkel">
@@ -73,9 +84,9 @@
             <option value="BTan">BTan</option>
         </select>
 
-        <label id="UkendtSideNavnA" for="UkendtSideA">Hosliggende</label>
+        <label id="UkendtSideNavnA" for="UkendtSideA"  class="InputLabel">Hosliggende</label>
         <input type="text" onClick="this.select();" name="UkendtSideA" id="UkendtSideA">
-        <label id="UkendtSideNavnB" for="UkendtSideB">Hypotynuse</label>
+        <label id="UkendtSideNavnB" for="UkendtSideB"  class="InputLabel">Hypotynuse</label>
         <input type="text" onClick="this.select();" name="UkendtSideB" id="UkendtSideB">
         <button type="button" onclick="calcUkendtVinkel()">Regn</button>
         <input disabled  value="" id="SlutUkendtVinkel">
@@ -95,7 +106,7 @@
             <option value="TV">Tan Til Vinkel</option>
         </select>
 
-        <label id="OmregnNavn" for="OmregnTal">Vinkel</label>
+        <label id="OmregnNavn" for="OmregnTal"  class="InputLabel">Vinkel</label>
         <input type="text" onClick="this.select();" name="OmregnTal" id="OmregnTal" >
         <button type="button" onclick="calcOmregn()">Regn</button>
         <input disabled  value="" id="SlutOmregn">

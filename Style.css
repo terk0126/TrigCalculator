@@ -117,11 +117,18 @@ h1 {
 
   .DarkModeLabel {
       color: white;
-      margin-left: 20%;
   }
 
-  .DarkMode {
-      padding-left: 50px;
+  .ComicLabel {
+      color: white;
+  }
+
+  .CheckWrap {
+      padding-left: 20px;
+      text-align: left;
+      width: 90%;
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
   }
 
 /*.H1Title {color: green;}*/

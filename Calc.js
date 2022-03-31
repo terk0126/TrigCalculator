@@ -209,49 +209,41 @@ function calcOmregn() {
 
     var OmregnSelect = document.getElementById("OmregnSelect");
     var OmregnSelectSelector = OmregnSelect.options[OmregnSelect.selectedIndex].value;
-    console.log(OmregnSelectSelector)
 
     var OmregnTal = Number(document.getElementById("OmregnTal").value.replace(",","."));
 
 
     var slutOmregn = document.getElementById("SlutOmregn");
 
-    var test = "1.5"
-
-    console.log(test)
-
-    console.log(test.replace(".",","))
 
 
 
 
 
     if (OmregnSelectSelector == "VC") {
-        MellemSlut = (Math.round(Math.cos(vinkelToRad(OmregnTal))*100)/100).toString().replace(".",",");
+        MellemSlut = (Math.round(Math.cos(vinkelToRad(OmregnTal))*1000)/1000).toString().replace(".",",");
         if(180>OmregnTal>0){slutOmregn.value=MellemSlut} else {slutOmregn.value="Ikke Validt Tal"}
 
     } else if (OmregnSelectSelector == "VS") {
-        MellemSlut = (Math.round(Math.sin(vinkelToRad(OmregnTal))*100)/100).toString().replace(".",",");
+        MellemSlut = (Math.round(Math.sin(vinkelToRad(OmregnTal))*1000)/1000).toString().replace(".",",");
         if(180>OmregnTal>0){slutOmregn.value=MellemSlut} else {slutOmregn.value="Ikke Validt Tal"}
 
     } else if (OmregnSelectSelector == "VT") {
-        MellemSlut = (Math.round(Math.tan(vinkelToRad(OmregnTal))*100)/100).toString().replace(".",",");
+        MellemSlut = (Math.round(Math.tan(vinkelToRad(OmregnTal))*1000)/1000).toString().replace(".",",");
         if(180>OmregnTal>0){slutOmregn.value=MellemSlut} else {slutOmregn.value="Ikke Validt Tal"}
 
     } else if (OmregnSelectSelector == "CV") {
-        console.log(Math.acos(0.1));
-        MellemSlut = (Math.round(Math.acos(OmregnTal)*100)/100).toString().replace(".",",");
+        MellemSlut = (Math.round(radToVinkel(Math.acos(OmregnTal))*1000)/1000).toString().replace(".",",");
+        if(180>OmregnTal>0){slutOmregn.value=MellemSlut} else {slutOmregn.value="Ikke Validt Tal"}
+        
+    } else if (OmregnSelectSelector == "SV") {
+        MellemSlut = (Math.round(radToVinkel(Math.asin(OmregnTal))*1000)/1000).toString().replace(".",",");
         if(180>OmregnTal>0){slutOmregn.value=MellemSlut} else {slutOmregn.value="Ikke Validt Tal"}
 
-        console.log(Math.tan(vinkelToRad(OmregnTal)));
-        console.log(vinkelToRad(OmregnTal));
-        console.log(OmregnTal);
-    } else if (OmregnSelectSelector == "SV") {
-        MellemSlut = (Math.round(Math.sin(vinkelToRad(OmregnTal))*100)/100).toString().replace(".",",");
-        if(180>OmregnTal>0){slutOmregn.value=MellemSlut} else {slutOmregn.value="Ikke Validt Tal"}
+
 
     } else if (OmregnSelectSelector == "TV") {
-        MellemSlut = (Math.round(Math.atan(vinkelToRad(OmregnTal))*100)/100).toString().replace(".",",");
+        MellemSlut = (Math.round(radToVinkel(Math.atan(OmregnTal))*1000)/1000).toString().replace(".",",");
         if(180>OmregnTal>0){slutOmregn.value=MellemSlut} else {slutOmregn.value="Ikke Validt Tal"}
         
     } 
@@ -284,16 +276,26 @@ function openNav() {
 
   function DarkMode() {
     var html = document.getElementById("html");
-    var checkBox = document.getElementById("CheckBox");
+    var checkBox = document.getElementById("DarkMode");
     var h1 = document.querySelectorAll("h1");
-    var label = document.querySelectorAll("label");
+    var label = document.querySelectorAll(".InputLabel");
     if (checkBox.checked) {
           html.style.backgroundColor = "#2b2c2e"
-          label.forEach(e => {e.style.color = "white"}); 
           h1.forEach(e => {e.style.color = "white"});
+          label.forEach(e => {e.style.color = "white"});
       } else {
           html.style.backgroundColor = "White"
-          label.forEach(e => {e.style.color = "black"});
           h1.forEach(e => {e.style.color = "black"});
+          label.forEach(e => {e.style.color = "black"});
+      }
+  }
+
+  function ComicMode() {
+    var checkBox = document.getElementById("ComicMode");
+    var h1 = document.querySelectorAll("h1");
+    if (checkBox.checked) {
+          h1.forEach(e => {e.style.fontFamily =  "Comic Sans MS"});
+      } else {
+          h1.forEach(e => {e.style.fontFamily =  ""});
       }
   }
