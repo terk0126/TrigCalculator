@@ -35,6 +35,14 @@
 
     <h1 id="H1Title" class="H1Title">Cosinus Relationer</h1>
 
+    <div class="InfoTrigWrap">
+        <span class="InfoTrigButton InfoKnapper">🛈</span>
+        <div class="InfoTrig InfoBaggrund CosRelationerInfo">
+        <h1>Cosinus Relationer</h1>
+        <p>Cosinus Relation er en måde man kan finde Vinkler i en vilkårlig Relation</p>
+        </div>
+    </div>
+
     <div class="CosRelationerWrap">
         <select name="Hvilken" id="Hvilken">
             <option value="Cos(a)">Cos(a)</option>
@@ -55,6 +63,14 @@
 
     <h1 >Kendt Vinkel</h1>
 
+    <div class="InfoTrigWrap">
+        <span class="InfoTrigButton InfoKnapper">🛈</span>
+        <div class="InfoTrig InfoBaggrund KendtVinkelInfo">
+        <h1>Kendt Vinkel</h1>
+        <p>Når man Kender en Vinkel og en side i en Retvinklet trekant kan man finde de andre med trigonomitri</p>
+        </div>
+    </div>
+
     <div class="KendtVinkelWrap">
         <label for="Vinkel"  class="InputLabel">Vinkel</label>
         <input type="text" onClick="this.select();" id="Vinkel" name="Vinkel">
@@ -73,6 +89,14 @@
     </div>
     <hr>
     <h1 >Ukendt Vinkel</h1>
+
+    <div class="InfoTrigWrap">
+        <span class="InfoTrigButton InfoKnapper">🛈</span>
+        <div class="InfoTrig InfoBaggrund UkendtVinkelInfo">
+        <h1>Ukendt Vinkel</h1>
+        <p>Hvis man ikke kender en vinkel i en Retvinklet trekant kan man bruge trigonomitri til at regne den ud</p>
+        </div>
+    </div>
 
     <div class="UkendtVinkelWrap">
         <select id="UkendtSideSelector" name="UkendtVinkelSide"  onchange="LabelChange()">
@@ -95,6 +119,14 @@
     <hr>
 
     <h1 >Omregning</h1>
+
+    <div class="InfoTrigWrap">
+        <span class="InfoTrigButton InfoKnapper">🛈</span>
+        <div class="InfoTrig InfoBaggrund">
+        <h1>Omregn</h1>
+        <p>Her Kan man blot regne fra Cosinus/Sinus/Tangens til vinkel og omvendt</p>
+        </div>
+    </div>
     
     <div class="OmregnWrap">
         <select id="OmregnSelect"  onchange="LabelChange()">

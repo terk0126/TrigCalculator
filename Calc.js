@@ -279,14 +279,25 @@ function openNav() {
     var checkBox = document.getElementById("DarkMode");
     var h1 = document.querySelectorAll("h1");
     var label = document.querySelectorAll(".InputLabel");
+    var InfoKnapper = document.querySelectorAll(".InfoKnapper");
+    var Paragraphs = document.querySelectorAll("p");
+    var InfoBaggrund = document.querySelectorAll(".InfoBaggrund");
+
     if (checkBox.checked) {
           html.style.backgroundColor = "#2b2c2e"
           h1.forEach(e => {e.style.color = "white"});
           label.forEach(e => {e.style.color = "white"});
+          InfoKnapper.forEach(e => {e.style.color = "white"});
+          Paragraphs.forEach(e => {e.style.color = "white"});
+          InfoBaggrund.forEach(e => {e.style.backgroundColor = "#46474a"});
+
       } else {
           html.style.backgroundColor = "White"
           h1.forEach(e => {e.style.color = "black"});
           label.forEach(e => {e.style.color = "black"});
+          InfoKnapper.forEach(e => {e.style.color = "black"});
+          Paragraphs.forEach(e => {e.style.color = "black"});
+          InfoBaggrund.forEach(e => {e.style.backgroundColor = "#e0e0e0"});
       }
   }
 
@@ -294,12 +305,16 @@ function openNav() {
     var checkBox = document.getElementById("ComicMode");
     var h1 = document.querySelectorAll("h1");
     var label = document.querySelectorAll("label");
+    var Paragraphs = document.querySelectorAll("p");
+
     if (checkBox.checked) {
           h1.forEach(e => {e.style.fontFamily =  "Comic Sans MS"});
           label.forEach(e => {e.style.fontFamily = "Comic Sans MS"})
+          Paragraphs.forEach(e => {e.style.fontFamily = "Comic Sans MS"})
       } else {
           h1.forEach(e => {e.style.fontFamily =  ""});
-          label.forEach(e => {e.style.fontFamily = ""})
+          label.forEach(e => {e.style.fontFamily = ""});
+          Paragraphs.forEach(e => {e.style.fontFamily = ""});
       }
   }
 
