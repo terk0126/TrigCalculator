@@ -117,10 +117,12 @@ h1 {
 
   .DarkModeLabel {
       color: white;
+      user-select: none;
   }
 
   .ComicLabel {
       color: white;
+      user-select: none;
   }
 
   .CheckWrap {
