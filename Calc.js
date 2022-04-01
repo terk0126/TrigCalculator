@@ -293,10 +293,13 @@ function openNav() {
   function ComicMode() {
     var checkBox = document.getElementById("ComicMode");
     var h1 = document.querySelectorAll("h1");
+    var label = document.querySelectorAll("label");
     if (checkBox.checked) {
           h1.forEach(e => {e.style.fontFamily =  "Comic Sans MS"});
+          label.forEach(e => {e.style.fontFamily = "Comic Sans MS"})
       } else {
           h1.forEach(e => {e.style.fontFamily =  ""});
+          label.forEach(e => {e.style.fontFamily = ""})
       }
   }
 
