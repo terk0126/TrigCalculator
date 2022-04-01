@@ -299,3 +299,27 @@ function openNav() {
           h1.forEach(e => {e.style.fontFamily =  ""});
       }
   }
+
+
+  function DarkLabelClick() {
+    var checkBox = document.getElementById("DarkMode");
+    if (checkBox.checked) {
+        checkBox.checked = false
+        DarkMode()
+    } else {
+        checkBox.checked = true 
+        DarkMode()}
+  };
+
+
+  function ComicLabelClick() {
+    var checkBox = document.getElementById("ComicMode");
+    if (checkBox.checked) {
+        checkBox.checked = false
+        ComicMode()
+    } else {
+        checkBox.checked = true 
+        ComicMode()}
+  };
+
+  
