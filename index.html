@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="html" style="margin-bottom: 500px;">
+<html lang="en" id="html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,190 +7,6 @@
     <title>Trig Calculator</title>
     <link rel="stylesheet" href="Style.css">
     <script src="Calc.js"></script>
-
-    <style>
-        hr {
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-h1 {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-.CosRelationerWrap {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.CosRelationerWrap > label {
-    margin-right: 5px;
-    margin-left: 10px;
-}
-
-
-.KendtVinkelWrap {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.KendtVinkelWrap > label {
-    margin-right: 5px;
-    margin-left: 10px;
-}
-
-
-
-.UkendtVinkelWrap {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.UkendtVinkelWrap > label {
-    margin-right: 5px;
-    margin-left: 10px;
-}
-
-.OmregnWrap {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.OmregnWrap > label {
-    margin-right: 5px;
-    margin-left: 10px;
-}
-
-.Menu {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    background-color: grey;
-}
-
-/* SideNav */
-.SideNav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #46474a;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
-  }
-  
-  /* Linksne i SideNav */
-  .SideNav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  /* Luk SideNav */
-  .SideNav .closebtn {
-    color: aliceblue;
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  /* Luk SideNav */
-  .SideNav span:hover {
-    color: #575757;
-  }
-  
-  
-  /* Åben Knap til SideNav */
-  .OpenButton {
-    color: #cecece;
-    padding-left: 3%;
-    padding-top: 8px;
-    font-size: 30px;
-    position: absolute;
-    cursor: pointer;
-  }
-
-  .DarkModeLabel {
-      color: white;
-      user-select: none;
-  }
-
-  .ComicLabel {
-      color: white;
-      user-select: none;
-  }
-
-  .CheckWrap {
-      padding-left: 20px;
-      text-align: left;
-      width: 90%;
-      font-size: 20px;
-      font-family: 'Roboto', sans-serif;
-  }
-
-  .CheckboxPointer {
-      cursor: pointer;
-  }
-/*.H1Title {color: green;}*/
-
-.InfoTrigButton:hover + .InfoTrig {
-    display: block;
-}
-
-.InfoTrig {
-    display: none;
-    width: 220px;
-    /*height: 90px;*/
-    background-color: #e0e0e0;
-    position: absolute;
-    right: 10px;
-    color: #46474a;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.InfoTrig h1 {
-    font-size: 15px;
-    margin-left: 10px;
-    margin-top: 5px;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.InfoTrig p {
-    font-size: 15px;
-    margin-left: 10px;
-    transform: translateY(-13px);
-    text-align: left;
-    margin-bottom: 0;
-    margin-right: 5px;
-    margin-top: 17px;
-}
-
-
-.InfoTrigWrap {
-    text-align: right;
-    margin: 10px;
-}
-
-
-    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -328,6 +144,31 @@ h1 {
         <input disabled  value="" id="SlutOmregn">
     </div>
 
+    <hr>
 
+    <div class="calculatorWrap">
+        <div class="GridContainer">
+            <input class="item1 GridItem" type="text" value="" id="Item1">
+            <button onclick="ClearCalc()" class="item2 GridItem">C</button>
+            <button onclick="DelANumber()" class="item3 GridItem">Del</button>
+            <button onclick="addANumber('/')" class="item4 GridItem">/</button>
+            <button onclick="addANumber(7)" class="item5 GridItem">7</button>
+            <button onclick="addANumber(8)" class="item6 GridItem">8</button>
+            <button onclick="addANumber(9)" class="item7 GridItem">9</button>
+            <button onclick="addANumber('*')" class="item8 GridItem">*</button>
+            <button onclick="addANumber(4)" class="item9 GridItem">4</button>
+            <button onclick="addANumber(5)" class="item10 GridItem">5</button>
+            <button onclick="addANumber(6)" class="item11 GridItem">6</button>
+            <button onclick="addANumber('+')" class="item12 GridItem">+</button>
+            <button onclick="addANumber(1)" class="item13 GridItem">1</button>
+            <button onclick="addANumber(2)" class="item14 GridItem">2</button>
+            <button onclick="addANumber(3)" class="item15 GridItem">3</button>
+            <button onclick="addANumber('-')" class="item16 GridItem">-</button>
+            <button onclick="addANumber(',')" class="item17 GridItem">,</button>
+            <button onclick="addANumber(0)" class="item18 GridItem">0</button>
+            <button onclick="Calc()" class="item19 GridItem">=</button>
+        </div>
+    </div>
+    
 </body>
 </html>

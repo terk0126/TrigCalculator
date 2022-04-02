@@ -340,4 +340,53 @@ function openNav() {
         ComicMode()}
   };
 
+
+
+
+
+
+
+  function parse(str) {
+    return Function(`'use strict'; return (${str})`)()
+  }
+
+  function ClearCalc() {
+    var input = document.getElementById("Item1");
+    input.value = ""
+    input.focus();
+  }
+
+  function Calc() {
+    var input = document.getElementById("Item1");
+    input.focus();
+    console.log(input.value)
+    console.log( parse(input.value) );
+    console.log(parse(input.value.toString().replace(",",".")));
+    
+    //input.value = parse(input)
+    //console.log(parse(input));
+    input.value = parse(input.value.toString().replace(",","."))
+  }
+
+  function addANumber(number) {
+      var input = document.getElementById("Item1");
+      input.value = input.value + number
+      input.focus();
+  }
+
+  function DelANumber() {
+    var input = document.getElementById("Item1");
+    input.value = input.value.slice(0,-1);
+  }
+
+
+
   
+
+
+
+
+
+
+
+
