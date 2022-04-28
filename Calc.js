@@ -13,21 +13,21 @@ function calc(){
     if (Hvilken == "Cos(a)") {
         console.log("Cos(a)")
         var cos = (B**2+C**2-A**2)/(2*B*C);
-        var cosS = Math.round(10*radToVinkel(Math.acos(cos)))/10
+        var cosS = Math.round(100*radToVinkel(Math.acos(cos)))/100
         if (isNaN(cosS)) {slut.value = "Ikke et Validt Tal"} 
         else {slut.value = cosS.toString().replace(".",",")}
 
     } else if (Hvilken == "Cos(b)") {
         console.log("Cos(b)")
         var cos = (A**2+C**2-A**2)/(2*A*C);
-        var cosS = Math.round(10*radToVinkel(Math.acos(cos)))/10
+        var cosS = Math.round(100*radToVinkel(Math.acos(cos)))/100
         if (isNaN(cosS)) {slut.value = "Ikke et Validt Tal"} 
         else {slut.value = cosS.toString().replace(".",",")}
 
     } else if (Hvilken == "Cos(c)") {
         console.log("Cos(c)")
         var cos = (A**2+B**2-C**2)/(2*A*B);
-        var cosS = Math.round(10*radToVinkel(Math.acos(cos)))/10
+        var cosS = Math.round(100*radToVinkel(Math.acos(cos)))/100
         if (isNaN(cosS)) {slut.value = "Ikke et Validt Tal"} 
         else {slut.value = cosS.toString().replace(".",",")}
     }
@@ -136,7 +136,7 @@ function CalcKendtVinkel() {
 
 
     if (value == "Hyp  ->  Hos") {
-        var SlutKendtVinkel = Math.round(10*SideLængde*Math.cos(vinkelToRad(Vinkel)))/10
+        var SlutKendtVinkel = Math.round(100*SideLængde*Math.cos(vinkelToRad(Vinkel)))/100
 
 
         if (isNaN(SlutKendtVinkel)) {SlutKendtVinkelBox.value = "Ikke et Validt Tal"} 
@@ -144,32 +144,32 @@ function CalcKendtVinkel() {
         
 
     } else if (value == "Hyp  ->  Mod") {
-        var SlutKendtVinkel = Math.round(10*SideLængde*Math.sin(vinkelToRad(Vinkel)))/10
+        var SlutKendtVinkel = Math.round(100*SideLængde*Math.sin(vinkelToRad(Vinkel)))/100
 
         if (isNaN(SlutKendtVinkel)) {SlutKendtVinkelBox.value = "Ikke et Validt Tal"} 
         else {SlutKendtVinkelBox.value = SlutKendtVinkel.toString().replace(".",",")}
 
     } else if (value == "Hos  ->  Hyp") {
-        var SlutKendtVinkel = Math.round(10*SideLængde/Math.cos(vinkelToRad(Vinkel)))/10
+        var SlutKendtVinkel = Math.round(100*SideLængde/Math.cos(vinkelToRad(Vinkel)))/100
 
 
         if (isNaN(SlutKendtVinkel)) {SlutKendtVinkelBox.value = "Ikke et Validt Tal"} 
         else {SlutKendtVinkelBox.value = SlutKendtVinkel.toString().replace(".",",")}
 
     } else if (value == "Mod  ->  Hyp") {
-        var SlutKendtVinkel = Math.round(10*SideLængde/Math.sin(vinkelToRad(Vinkel)))/10
+        var SlutKendtVinkel = Math.round(100*SideLængde/Math.sin(vinkelToRad(Vinkel)))/100
 
         if (isNaN(SlutKendtVinkel)) {SlutKendtVinkelBox.value = "Ikke et Validt Tal"} 
         else {SlutKendtVinkelBox.value = SlutKendtVinkel.toString().replace(".",",")}
 
     } else if (value == "Hos  ->  Mod") {
-        var SlutKendtVinkel = Math.round(10*SideLængde*Math.tan(vinkelToRad(Vinkel)))/10
+        var SlutKendtVinkel = Math.round(100*SideLængde*Math.tan(vinkelToRad(Vinkel)))/100
 
         if (isNaN(SlutKendtVinkel)) {SlutKendtVinkelBox.value = "Ikke et Validt Tal"} 
         else {SlutKendtVinkelBox.value = SlutKendtVinkel.toString().replace(".",",")}
 
     } else if (value == "Mod  ->  Hos") {
-        var SlutKendtVinkel = Math.round(10*SideLængde/Math.tan(vinkelToRad(Vinkel)))/10
+        var SlutKendtVinkel = Math.round(100*SideLængde/Math.tan(vinkelToRad(Vinkel)))/100
 
         if (isNaN(SlutKendtVinkel)) {SlutKendtVinkelBox.value = "Ikke et Validt Tal"} 
         else {SlutKendtVinkelBox.value = SlutKendtVinkel.toString().replace(".",",")}
@@ -187,17 +187,17 @@ function calcUkendtVinkel() {
     var UkendtVinkelSide = UkendtSideSelector.options[UkendtSideSelector.selectedIndex].innerText;
 
     if (UkendtVinkelSide == "ACos" ||UkendtVinkelSide ==  "BCos") {
-        var Cos = Math.round(10*radToVinkel(Math.acos(UkendtSideB/UkendtSideA)))/10
+        var Cos = Math.round(100*radToVinkel(Math.acos(UkendtSideB/UkendtSideA)))/100
         if (isNaN(Cos)) {SlutUkendtVinkel.value = "Ikke et Validt Tal"} 
         else {SlutUkendtVinkel.value = Cos.toString().replace(".",",")}
 
     } else if (UkendtVinkelSide == "ASin"|| UkendtVinkelSide == "BSin") {
-        var Sin = Math.round(10*radToVinkel(Math.asin(UkendtSideB/UkendtSideA)))/10
+        var Sin = Math.round(100*radToVinkel(Math.asin(UkendtSideB/UkendtSideA)))/100
         if (isNaN(Sin)) {SlutUkendtVinkel.value = "Ikke et Validt Tal"} 
         else {SlutUkendtVinkel.value = Sin.toString().replace(".",",")}
 
     } else if (UkendtVinkelSide == "ATan"|| UkendtVinkelSide == "BTan") {
-        var Tan = Math.round(10*radToVinkel(Math.atan(UkendtSideB/UkendtSideA)))/10
+        var Tan = Math.round(100*radToVinkel(Math.atan(UkendtSideB/UkendtSideA)))/100
         if (isNaN(Tan)) {SlutUkendtVinkel.value = "Ikke et Validt Tal"} 
         else {SlutUkendtVinkel.value = Tan.toString().replace(".",",")}
         
